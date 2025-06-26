@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      * {
+        color: rgb(49, 48, 48);
+        font-size: 1rem;
+        font-family: system-ui;
+      }
+      .content {
+        background-color: #8cb6c0;
+        padding: 0.3rem;
+        /* margin: 0.3rem; */
+        text-align: center;
+        border: 0.15rem solid black;
+        flex-grow: 3;
+        font-size: 1.5rem;
+      }
+      /* .padding {
+        background-color: #c3d08b;
+        padding: 0.3rem;
+        border: 1px solid black;
+        border-style: dashed;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-bottom: 1.2rem;
+      }
+      .border {
+        background-color: #fddd9b;
+        padding: 0.3rem;
+        border: 1px solid black;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-bottom: 1.2rem;
+      }
+      .margin {
+        padding: 0.3rem;
+        border: 1px solid black;
+        border-style: dashed;
+        background-color: #f9cc9d;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-bottom: 1.2rem;
+      } */
+
+      .box_inside {
+        padding: 0.3rem;
+        border: 0.15rem solid black;
+        border-style: dashed;
+        background-color: #f9cc9d;
+        flex-grow: 3;
+        /* padding-left: 1.2rem; */
+        /* padding-right: 1.2rem; */
+        /* padding-bottom: 1.2rem; */
+      }
+      .box_inside-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+      .bg-margin {
+        background-color: #f9cc9d;
+      }
+      .bg-border {
+        background-color: #fddd9b;
+      }
+      .bg-padding {
+        background-color: #c3d08b;
+      }
+      .label-tl {
+        position: absolute;
+        left: 0rem;
+        padding: 0.2rem;
+      }
+
+      span {
+        padding: 0.3rem 0.6rem;
+        font-size: 1.5rem;
+      }
+
+      .border-solid {
+        border-style: solid;
+      }
+
+      /* img {
+        width: 500px;
+      } */
+
+      .box {
+        display: flex;
+        padding: 10rem 20%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .box {
+          display: flex;
+          padding: 10rem 15rem;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .box {
+          display: flex;
+          padding: 10rem 5rem;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .box {
+          display: flex;
+          padding: 10rem 5rem;
+        }
+
+        span,
+        .content {
+          /* padding: 0.3rem 0.6rem; */
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="image.png" alt="" srcset="" /> 
+      ele.onmouseover = function (event) {
+        ele.style.background = "red";
+      };-->
+    <!-- <div class="box">
+      <div class="margin">
+        margin
+        <div class="border">
+          border
+          <div class="padding">
+            padding
+            <div class="content">1365x961</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- box -->
+    <div class="box">
+      <!-- margin -->
+      <div
+        class="box_inside bg-margin box_main"
+      >
+        <div class="box_inside-content">
+          <span class="label-tl">margin</span>
+          <span></span>
+          <span>-</span>
+          <span></span>
+        </div>
+        <div class="box_inside-content">
+          <span>-</span>
+          <!-- border -->
+          <div
+            class="box_inside bg-border border-solid"
+          >
+            <div class="box_inside-content">
+              <span class="label-tl">border</span>
+              <span></span>
+              <span>-</span>
+              <span></span>
+            </div>
+            <div class="box_inside-content">
+              <span>-</span>
+              <!-- padding -->
+              <div
+                class="box_inside bg-padding"
+              >
+                <div class="box_inside-content">
+                  <span class="label-tl">padding</span>
+                  <span></span>
+                  <span>-</span>
+                  <span></span>
+                </div>
+                <div class="box_inside-content">
+                  <span>-</span>
+                  <!-- content -->
+                  <div
+                    class="content"
+                  >
+                    1365x961
+                  </div>
+                  <!--  -->
+                  <span>-</span>
+                </div>
+                <div class="box_inside-content">
+                  <span></span>
+                  <span>-</span>
+                  <span></span>
+                </div>
+              </div>
+              <!--  -->
+              <span>-</span>
+            </div>
+            <div class="box_inside-content">
+              <span></span>
+              <span>-</span>
+              <span></span>
+            </div>
+          </div>
+          <!--  -->
+          <span>-</span>
+        </div>
+        <div class="box_inside-content">
+          <span></span>
+          <span>-</span>
+          <span></span>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+    <!--  -->
+  </body>
+</html>
